@@ -1,9 +1,6 @@
 # all-contri-auto-test
 Testing action publishing
 
-I am a Dummy change.
-I am a Dummy change.
-
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
