@@ -1,7 +1,9 @@
 name: Update Contributors
 
 on:
+  push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   all-contributors:
@@ -69,7 +71,7 @@ jobs:
           while IFS= read -r u; do
             [ -z "$u" ] && continue
             echo "Adding contributor: $u"
-            npx all-contributors add "$u" custom
+            npx all-contributors add "$u" code
           done <<< "${{ steps.authors.outputs.list }}"
 
           npx all-contributors generate
