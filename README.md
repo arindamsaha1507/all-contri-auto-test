@@ -1,6 +1,7 @@
 # all-contri-auto-test
 Testing action publishing
 
+I am a Dummy change.
 
 ## Contributors
 
