@@ -2,6 +2,7 @@
 Testing action publishing
 
 I am a Dummy change.
+I am a Dummy change.
 
 ## Contributors
 
