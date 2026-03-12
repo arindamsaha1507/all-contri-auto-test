@@ -26,11 +26,13 @@ COAUTHOR_LOGINS=$(
 
 echo "Combining and deduplicating GitHub usernames..."
 
-ALL_USERS=$(printf "%s\n%s\n" "$AUTHOR_LOGINS" "$COAUTHOR_LOGINS" \
+ALL_USERS=$(
+  printf "%s\n%s\n" "$AUTHOR_LOGINS" "$COAUTHOR_LOGINS" \
   | sed '/^$/d' \
-  | grep -viE '\[bot\]$' \
-  | sort -u)
+  | grep -viE '\[bot\]$' || true
+)
 
+ALL_USERS=$(printf "%s\n" "$ALL_USERS" | sort -u)
 
 echo
 echo "Users detected:"
